@@ -1375,7 +1375,23 @@
     "returns selected item": "Retornar itens selecionados",
     "The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.": "O método usado para retornar o item selecionado. Aceita um único argumento o <code>item</code> que tem um escopo da instância do typeahead",
     "Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.": "Use de forma básica e evite de criar versões completamente diferentes do mesmo site. Ao invés disto, use-os para complementar cada apresentação do dispositivo. Utilitários responsives não devem ser usados com tabelas, e isto não é suportado.",
-    "Media component":"Componentes de mídia",
-    "Version 2.2.1": "Versão 2.2.1"
+    "Media component": "Componentes de mídia",
+    "Version 2.2.1": "Versão 2.2.1",
+    "Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.": "Implementação estilizada da tag HTML <code>&lt;abbr&gt;</code> para abreviação e acrônimo para mostrar a versão expandida do hover. Abreviações como o atributo <code>title</code> tem uma um destaque com uma borda e um cursor no hover, que provê um adicional contexto quando o usuário passa o mouse sob o link",
+    "first.last@example.com": "first.last@example.com",
+    "Remove default the <code>list-style</code> and left padding on list items (immediate children only).": "Remova por padrão o <code>list-style</code> e padding a esquerda de uma lista de items (somente os filhos imediatos da lista)",
+    "Place all list items on a single line with <code>inline-block</code> and some light padding.": "Coloque todos itens da lista em uma única linha com <code>inline-block</code> e algum padding",
+    "Segmented dropdown groups": "Grupos dropdown de segmento",
+    "Invalid inputs": "Input inválidos",
+    "Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code> and add the <code>required</code> attribute.": "Estilize inputs através da funcionalidade padrão do browser com um <code>:invalid</code>. Especifique um <code>type</code> e adicionar um atributo <code>required</code>",
+    "Easily collapsible": "Facilmente colapsável",
+    "For easy implementation, labels and badges will simply collapse (via CSS's <code>:empty</code> selector) when no content exists within.": "Para implementação fácil, rótulos e emblemas irão se tornar simplesmente colapsáveis (via css com o <code>:empty</code>) quando nenhum conteúdo existir dentro",
+    "Customize and Download": "Customizar e fazer download",
+    "Version 2.2.2": "Versão 2.2.2",
+    "All infinitive events provide preventDefault functionality. This provides the ability to stop the execution of an action before it starts.": "Todos eventos no infinitivo provê uma funcionalidade com preventDefault. Isto provê a habilidade de parar a execução de uma ação antes de começar.",
+    "A programmatic api for toggling menus for a given navbar or tabbed navigation.": "Uma api programática para alternar menus para uma navegação comum ou em abas",
+    "Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.": "Adicione uma rápida e dinâmica funcionalidade de transição em painés de conteúdo, até mesmo via menus dropdowns",
+    "Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).": "Pixels para offset da tela quando é calculada a posição do scroll. Se um único número é fornecido, o offset irá ser aplicado nas direções topo e esquerda. Para uma única direção, ou múltiplos efeitos únicos de offset, simplesmente passe como parâmetro um objeto <code>offset: { x: 10 }</code>. Use uma função quando você precisa dar um offset dinâmicamente (útil para alguns designs responsivos).",
+    "Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.": "Grids fluidos utiliza aninhamento de forma diferente: cada nível de colunas devem adicionar até 12 colunas. Isto é por que o grid fluido usa percentagens, não pixels, para escolher as larguras."
   }
 }
