@@ -46,6 +46,8 @@
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
+    //$('.balloon-test').balloon()
+    
 
     // popover demo
     $("a[rel=popover]")
