@@ -984,8 +984,15 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <h3>Live demo</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="btn btn-large btn-danger balloon-test">{{_i}}Click to toggle popover{{/i}}</a>
+          <a href="#" class="balloon-test">{{_i}}Click to toggle popover{{/i}}</a>
         </div>
+<pre class="prettyprint linenums">
+$('.balloon-test').balloon({
+    content: 'bla',
+    placement: 'top'
+});
+$('.balloon-test').balloon('show');
+</pre>
 
       {{! /example }}
 
