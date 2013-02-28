@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-popover.js v2.2.1
+ * bootstrap-balloon.js v2.1.1
  * http://twitter.github.com/bootstrap/javascript.html#popovers
  * ===========================================================
  * Copyright 2012 Twitter, Inc.
@@ -23,28 +23,27 @@
   "use strict"; // jshint ;_;
 
 
- /* POPOVER PUBLIC CLASS DEFINITION
+ /* BALLOON PUBLIC CLASS DEFINITION
   * =============================== */
 
-  var Popover = function (element, options) {
-    this.init('popover', element, options)
+  var Balloon = function (element, options) {
+    this.init('balloon', element, options)
   }
 
 
-  /* NOTE: POPOVER EXTENDS BOOTSTRAP-TOOLTIP.js
+  /* NOTE: BALLOON EXTENDS BOOTSTRAP-TOOLTIP.js
      ========================================== */
 
-  Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype, {
+  Balloon.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype, {
 
-    constructor: Popover
+    constructor: Balloon
 
   , setContent: function () {
       var $tip = this.tip()
         , title = this.getTitle()
         , content = this.getContent()
 
-      $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-      $tip.find('.popover-content > *')[this.options.html ? 'html' : 'text'](content)
+      $tip.find('.balloon-content > *')[this.options.html ? 'html' : 'text'](content)
 
       $tip.removeClass('fade top bottom left right in')
     }
@@ -78,26 +77,26 @@
   })
 
 
- /* POPOVER PLUGIN DEFINITION
+ /* Balloon PLUGIN DEFINITION
   * ======================= */
 
-  $.fn.popover = function (option) {
+  $.fn.balloon = function (option) {
     return this.each(function () {
       var $this = $(this)
-        , data = $this.data('popover')
+        , data = $this.data('balloon')
         , options = typeof option == 'object' && option
-      if (!data) $this.data('popover', (data = new Popover(this, options)))
+      if (!data) $this.data('balloon', (data = new Balloon(this, options)))
       if (typeof option == 'string') data[option]()
     })
   }
 
-  $.fn.popover.Constructor = Popover
+  $.fn.balloon.Constructor = Balloon
 
-  $.fn.popover.defaults = $.extend({} , $.fn.tooltip.defaults, {
-    placement: 'right'
+  $.fn.balloon.defaults = $.extend({} , $.fn.tooltip.defaults, {
+    placement: 'bottom'
   , trigger: 'click'
   , content: ''
-  , template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
+  , template: '<div class="balloon"><div class="arrow"></div><div class="arrow-border"><div class="arrow-border-inner"></div></div><div class="balloon-inner"><div class="balloon-content"><div></div></div></div></div>'
   })
 
 }(window.jQuery);

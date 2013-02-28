@@ -19,7 +19,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -93,6 +93,7 @@
           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
+          <li><a href="#balloon"><i class="icon-chevron-right"></i> Balloon</a></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alertas</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Botões</a></li>
           <li><a href="#collapse"><i class="icon-chevron-right"></i> Colapsáveis</a></li>
@@ -136,7 +137,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
 
           <h3>Eventos</h3>
           <p>O Bootstrap provê eventos customizados para ações únicas dos plugins. Geralmente, estes vêm em uma forma de infinitivo e passado particípio - onde o infinitivo (ex. <code>show</code>) é lançado no começo de um evento, e sua forma no passado particípio (ex. <code>shown</code>) é lançado ao se completar uma ação.</p>
-          <p>Todos eventos no infinitivo provê uma funcionalidade com preventDefault. Isto provê a habilidade de parar a execução de uma ação antes de começar.</p>
+          <p>Todos eventos infinitivos provê a funcionalidade de preventDefault. Isto provê a habilidade de parar a execução de uma ação antes mesmo dela começar</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
     if (!data) return e.preventDefault() // stops modal from being shown
@@ -181,7 +182,7 @@ $('#myModal').on('show', function (e) {
           <h3>Exemplo estático</h3>
           <p>Um modal renderiza um cabeçalho, corpo, e uma coleção de ações no footer</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
-            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>Cabeçalho do modal</h3>
@@ -507,7 +508,7 @@ $('#myModal').on('hidden', function () {
 
           <h3>Métodos</h3>
           <h4>$().dropdown('toggle')</h4>
-          <p>Uma api programática para alternar menus para uma navegação comum ou em abas</p>
+          <p>Um api programática para alternar menus para uma barra de navegação de uma navegação em abas</p>
         </section>
 
 
@@ -636,7 +637,7 @@ $('[data-spy="scroll"]').each(function () {
 
 
           <h2>Exemplo de abas</h2>
-          <p>Adicione uma rápida e dinâmica funcionalidade de transição em painés de conteúdo, até mesmo via menus dropdowns</p>
+          <p>Adicione rapidamente, uma funcionalidade de aba dinâmica para realizar uma transição através de painés de conteúdo local, até mesmo via menus dropdown</p>
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Início</a></li>
@@ -1034,7 +1035,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
       </section>
 
+      <!-- Balloon
+      ================================================== -->
+      <section id="balloon">
+        <div class="page-header">
+          <h1>Balloon <small>bootstrap-balloon.js</small></h1>
+        </div>
 
+        <p><strong>Requer que o <a href="#tooltips">Tooltip</a> seja incluído.</strong></p>
+
+        <h3>balloon estático</h3>
+        <p>Quatro opções estão disponíveis: top, right, bottom, e alinhado a esquerda com left</p>
+
+        <h3>Live demo</h3>
+        <div class="bs-docs-example" style="padding-bottom: 24px;">
+          <a href="#" class="balloon-test" title="foo balloon">clique para exibir o balloon</a>
+        </div>
+<pre class="prettyprint linenums">
+$('.balloon-test').balloon({
+    content: 'lorem ipsum',
+    placement: 'top'
+});
+$('.balloon-test').balloon('show');
+</pre>
+
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>Uso</h2>
+        <p>habilitar o balloon via javascript</p>
+        <pre class="prettyprint linenums">$('#example').balloon(opções)</pre>
+
+        <h3>Opções</h3>
+        <p>O Balloon funciona com as mesmas opções e métodos do <a href="#popovers">Popover</a></p>
+        
+      </section>
 
       <!-- Alert
       ================================================== -->
@@ -1687,7 +1724,7 @@ $('[data-spy="affix"]').each(function () {
                <td>offset</td>
                <td>number | function | object</td>
                <td>10</td>
-               <td>Pixels para offset da tela quando é calculada a posição do scroll. Se um único número é fornecido, o offset irá ser aplicado nas direções topo e esquerda. Para uma única direção, ou múltiplos efeitos únicos de offset, simplesmente passe como parâmetro um objeto <code>offset: { x: 10 }</code>. Use uma função quando você precisa dar um offset dinâmicamente (útil para alguns designs responsivos).</td>
+               <td>Pixels para dar um offset da tela quando calculando a posição do scroll. Se um único número é provido, o offset será aplicado em ambas direções topo e esquerda. Para listar elementos em uma única direção, ou múltiplos efeitos de offset únicos, simplesmente use um objeto <code>offset: { x: 10 }</code>. Use uma função quando você precisa dinamicamente prover um offset (útil para design responsivo).</td>
              </tr>
             </tbody>
           </table>
@@ -1736,6 +1773,7 @@ $('[data-spy="affix"]').each(function () {
     <script src="assets/js/bootstrap-tab.js"></script>
     <script src="assets/js/bootstrap-tooltip.js"></script>
     <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-balloon.js"></script>
     <script src="assets/js/bootstrap-button.js"></script>
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
