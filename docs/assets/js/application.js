@@ -46,7 +46,14 @@
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
-    //$('.balloon-test').balloon()
+    
+    $('.balloon-test').on('click', function(){
+        $(this).balloon({
+          content: 'lorem ipsum',
+          placement: 'top'
+        }).balloon('show')
+    })
+      
     
 
     // popover demo

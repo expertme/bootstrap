@@ -1376,6 +1376,12 @@
     "The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.": "O método usado para retornar o item selecionado. Aceita um único argumento o <code>item</code> que tem um escopo da instância do typeahead",
     "Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.": "Use de forma básica e evite de criar versões completamente diferentes do mesmo site. Ao invés disto, use-os para complementar cada apresentação do dispositivo. Utilitários responsives não devem ser usados com tabelas, e isto não é suportado.",
     "Media component":"Componentes de mídia",
-    "Version 2.2.1": "Versão 2.2.1"
+    "Version 2.2.1": "Versão 2.2.1",
+    "Balloon":"Balloon",
+    "<strong>Requires <a href=\"#tooltips\">Tooltip</a> to be included.</strong>":"<strong>Requer que o <a href=\"#tooltips\">Tooltip</a> seja incluído.</strong>",
+    "Static balloon":"balloon estático",
+    "Click to show balloon":"clique para exibir o balloon",
+    "Enable Balloon via JavaScript:":"habilitar o balloon via javascript",
+    "The Balloon works with same options and methods that <a href=\"#popovers\">Popover</a>":"O Balloon funciona com as mesmas opções e métodos do <a href=\"#popovers\">Popover</a>"
   }
 }
