@@ -93,6 +93,7 @@
           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
+          <li><a href="#balloon"><i class="icon-chevron-right"></i> Balloon</a></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alertas</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Botões</a></li>
           <li><a href="#collapse"><i class="icon-chevron-right"></i> Colapsáveis</a></li>
@@ -1034,7 +1035,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
       </section>
 
+      <!-- Balloon
+      ================================================== -->
+      <section id="balloon">
+        <div class="page-header">
+          <h1>Balloon <small>bootstrap-balloon.js</small></h1>
+        </div>
 
+        <p><strong>Requer que o <a href="#tooltips">Tooltip</a> seja incluído.</strong></p>
+
+        <h3>balloon estático</h3>
+        <p>Quatro opções estão disponíveis: top, right, bottom, e alinhado a esquerda com left</p>
+
+        <h3>Live demo</h3>
+        <div class="bs-docs-example" style="padding-bottom: 24px;">
+          <a href="#" class="balloon-test" title="foo balloon">clique para exibir o balloon</a>
+        </div>
+<pre class="prettyprint linenums">
+$('.balloon-test').balloon({
+    content: 'lorem ipsum',
+    placement: 'top'
+});
+$('.balloon-test').balloon('show');
+</pre>
+
+
+
+        <hr class="bs-docs-separator">
+
+
+        <h2>Uso</h2>
+        <p>habilitar o balloon via javascript</p>
+        <pre class="prettyprint linenums">$('#example').balloon(opções)</pre>
+
+        <h3>Opções</h3>
+        <p>O Balloon funciona com as mesmas opções e métodos do <a href="#popovers">Popover</a></p>
+        
+      </section>
 
       <!-- Alert
       ================================================== -->
@@ -1736,6 +1773,7 @@ $('[data-spy="affix"]').each(function () {
     <script src="assets/js/bootstrap-tab.js"></script>
     <script src="assets/js/bootstrap-tooltip.js"></script>
     <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-balloon.js"></script>
     <script src="assets/js/bootstrap-button.js"></script>
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>

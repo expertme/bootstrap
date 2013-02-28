@@ -1,0 +1,153 @@
+//
+// Balloon
+// --------------------------------------------------
+
+.balloon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: none;
+  width: 251px;
+  padding: 1px;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #bbbbbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 0 4px rgba(187,187,187,0.4);
+  -moz-box-shadow: 0 0 0 4px rgba(187,187,187,0.4);
+  box-shadow: 0 0 0 4px rgba(187,187,187,0.4);
+}
+.balloon.top {
+  margin-top: -15px;
+}
+.balloon.right {
+  margin-left: 15px;
+}
+.balloon.bottom {
+  margin-top: 15px;
+}
+.balloon.left {
+  margin-left: -15px;
+}
+
+.balloon .arrow {
+  position: absolute;
+  content: '';
+  height:12px;
+  width:12px;
+  background: white;
+  z-index:1;
+  border-right: 1px solid #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+  .rotate(-45);
+  /*filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',
+  M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476);
+  zoom: 1;*/
+}
+
+/* top position */
+.balloon.top .arrow {
+  position: absolute;
+  bottom:-7px;
+  left:46%;
+  .rotate(135deg);    
+}
+
+.balloon.top .arrow-border {
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   bottom:-11px;
+   left: 46.3%; 
+   overflow: hidden;
+   .rotate(225deg);    
+}
+
+.balloon.top .arrow-border-inner {
+    padding: 10px;
+    background: rgba(187,187,187,0.4);
+    border-radius: 3px;
+    z-index: 0;
+}
+
+/* right position */
+.balloon.right .arrow {
+  bottom: 19%;
+  left:-7px;
+  .rotate(-135deg);
+}
+
+.balloon.right .arrow-border {
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   bottom:27%;
+   left: -11px;
+   overflow: hidden; 
+   .rotate(-45deg);    
+}
+
+.balloon.right .arrow-border-inner {
+    padding: 10px;
+    background: rgba(187,187,187,0.4);
+    border-radius: 3px;
+}
+
+
+/* bottom */
+.balloon.bottom .arrow {
+  position: absolute;
+  top:-7px;
+  left:120px;
+  .rotate(-45deg);
+ 
+}
+
+.balloon.bottom .arrow-border {
+   position: absolute;
+   width: 82px;
+   height: 10px;
+   top: -15px;
+   left:84px; 
+   overflow: hidden;
+}
+
+.balloon.bottom .arrow-border-inner {
+    padding: 14px;
+    position:absolute;
+    bottom:-23px;
+    left: 35%;
+    background: rgba(187,187,187,0.4);
+    border-radius: 3px;
+    z-index: 0;
+    border-radius: 3px;
+    .rotate(-45deg);
+}
+
+/* left position */
+.balloon.left .arrow {
+  bottom:4px;
+  right:-7px;
+  .rotate(45deg);
+}
+
+.balloon.left .arrow-border {
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   bottom:20%;
+   right: -10px;
+   overflow: hidden; 
+   .rotate(45deg); 
+}
+
+.balloon.left .arrow-border-inner {
+    padding: 10px;
+    background: rgba(187,187,187,0.4);
+    border-radius: 3px;
+}
