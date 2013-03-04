@@ -29,6 +29,7 @@
           <li><a href="#carousel"><i class="icon-chevron-right"></i> {{_i}}Carousel{{/i}}</a></li>
           <li><a href="#typeahead"><i class="icon-chevron-right"></i> {{_i}}Typeahead{{/i}}</a></li>
           <li><a href="#affix"><i class="icon-chevron-right"></i> {{_i}}Affix{{/i}}</a></li>
+          <li><a href="#select"><i class="icon-chevron-right"></i> {{_i}}Select{{/i}}</a></li>
         </ul>
       </div>
       <div class="span9">
@@ -1662,6 +1663,63 @@ $('[data-spy="affix"]').each(function () {
         </section>
 
 
+        <!-- Select
+          ================================================== -->
+          <section id="select">
+            <div class="page-header">
+              <h1>{{_i}}Affix{{/i}} <small>bootstrap-select.js</small></h1>
+            </div>
+
+            <h2>{{_i}}Example{{/i}}</h2>
+            <p>{{_i}}The subnavigation on the left is a live demo of the affix plugin.{{/i}}</p>
+
+            <hr class="bs-docs-separator">
+
+            <h2>{{_i}}Usage{{/i}}</h2>
+
+            <h3>{{_i}}Via data attributes{{/i}}</h3>
+            <p>{{_i}}To easily add affix behavior to any element, just add <code>data-spy="affix"</code> to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.{{/i}}</p>
+
+            <pre class="prettyprint linenums">&lt;div data-spy="affix" data-offset-top="200"&gt;...&lt;/div&gt;</pre>
+
+            <div class="alert alert-info">
+              <strong>{{_i}}Heads up!{{/i}}</strong>
+              {{_i}}You must manage the position of a pinned element and the behavior of its immediate parent. Position is controlled by <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.{{/i}}
+            </div>
+
+            <h3>{{_i}}Via JavaScript{{/i}}</h3>
+            <p>{{_i}}Call the affix plugin via JavaScript:{{/i}}</p>
+            <pre class="prettyprint linenums">$('#navbar').affix()</pre>
+
+            <h3>{{_i}}Methods{{/i}}</h3>
+            <h4>.affix('refresh')</h4>
+            <p>{{_i}}When using affix in conjunction with adding or removing of elements from the DOM, you'll want to call the refresh method:{{/i}}</p>
+<pre class="prettyprint linenums">
+$('[data-spy="affix"]').each(function () {
+  $(this).affix('refresh')
+});
+</pre>
+          <h3>{{_i}}Options{{/i}}</h3>
+          <p>{{_i}}Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset-top="200"</code>.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">{{_i}}Name{{/i}}</th>
+               <th style="width: 100px;">{{_i}}type{{/i}}</th>
+               <th style="width: 50px;">{{_i}}default{{/i}}</th>
+               <th>{{_i}}description{{/i}}</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>{{_i}}offset{{/i}}</td>
+               <td>{{_i}}number | function | object{{/i}}</td>
+               <td>{{_i}}10{{/i}}</td>
+               <td>{{_i}}Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).{{/i}}</td>
+             </tr>
+            </tbody>
+          </table>
+        </section>
 
       </div>{{! /span9 }}
     </div>{{! row}}
