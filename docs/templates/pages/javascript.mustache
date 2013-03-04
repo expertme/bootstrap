@@ -974,19 +974,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <p>{{_i}}<strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong>{{/i}}</p>
 
-        <h3>{{_i}}Static balloon{{/i}}</h3>
-        <p>{{_i}}Four options are available: top, right, bottom, and left aligned.{{/i}}</p>
-
         <h3>Live demo</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="balloon-test" title="foo balloon">{{_i}}Click to show balloon{{/i}}</a>
+          <a href="#" class="btn btn-large btn-danger" rel="balloon" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">{{_i}}Click to toggle balloon{{/i}}</a>
+        </div>
+        <h4>{{_i}}Four directions{{/i}}</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="balloon" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on top">Balloon on top</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on right">Balloon on right</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on bottom">Balloon on bottom</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on left">Balloon on left</a></li>
+          </ul>
         </div>
 <pre class="prettyprint linenums">
-$('.balloon-test').balloon({
-    content: 'lorem ipsum',
-    placement: 'top'
-});
-$('.balloon-test').balloon('show');
+//html  
+&lt;ul class=&quot;bs-docs-tooltip-examples&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;top&quot; data-content=&quot;sample content.&quot; &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;right&quot; data-content=&quot;sample content.&quot; &gt;Balloon on right&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;bottom&quot; data-content=&quot;sample content.&quot; &gt;Balloon on bottom&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;left&quot; data-content=&quot;sample content.&quot; &gt;Balloon on left&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<pre class="prettyprint linenums">
+// javascript
+$("a[rel=balloon]")
+  .balloon()
+  .click(function(e) {
+    e.preventDefault()
+})
 </pre>
 
       {{! /example }}

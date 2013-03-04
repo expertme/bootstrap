@@ -47,14 +47,6 @@
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
     
-    $('.balloon-test').on('click', function(){
-        $(this).balloon({
-          content: 'lorem ipsum',
-          placement: 'top'
-        }).balloon('show')
-    })
-      
-    
 
     // popover demo
     $("a[rel=popover]")
@@ -62,7 +54,14 @@
       .click(function(e) {
         e.preventDefault()
       })
-
+      
+    // balloon demo
+    $("a[rel=balloon]")
+      .balloon()
+      .click(function(e) {
+        e.preventDefault()
+    })
+    
     // button state demo
     $('#fat-btn')
       .click(function () {
