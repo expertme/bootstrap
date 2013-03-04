@@ -20,37 +20,48 @@
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict" // jshint ;_;
 
 
  /* SELECT CLASS DEFINITION
   * ========================= */
   var Select = function (element) {
-      // var $el = $(element).on('click.dropdown.data-api', this.toggle);
+      this.$element = $(element)
 
-      // $('html').on('click.dropdown.data-api', function () {
-      //     $el.parent().removeClass('open');
-      // });
-  };
+      this.insertSpan()
+      this.setValue()
+  }
 
   Select.prototype = {
-      
-  };
+      insertSpan: function (){
+          this.$element.prepend('<span></span>')
+          this.$span = this.$element.find('span')
+      },
+
+      setValue: function (){
+          var that = this;
+
+          this.element.find('select').on('change', function (){
+              var text = $(this).find('option:selected').text()
+              that.$span.html(text)
+          })
+      },
+  }
 
   /* SELECT PLUGIN DEFINITION
    * ========================== */
 
    $.fn.select = function (option) {
        return this.each(function () {
-           var $this = $(this);
-           var data = $this.data('select');
+           var $this = $(this)
+           var data = $this.data('select')
 
-           if (!data) $this.data('select', (data = new Select(this)));
-           if (typeof option == 'string') data[option].call($this);
-       });
-  };
+           if (!data) $this.data('select', (data = new Select(this)))
+           if (typeof option == 'string') data[option].call($this)
+       })
+  }
 
-  $.fn.select.Constructor = Select;
+  $.fn.select.Constructor = Select
 
   /* APPLY TO SELECT DROPDOWN ELEMENTS
    * =================================== */
@@ -61,4 +72,4 @@
   //   .on('click.dropdown.data-api touchstart.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
   //   .on('keydown.dropdown.data-api touchstart.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
-}(window.jQuery);
+}(window.jQuery)
