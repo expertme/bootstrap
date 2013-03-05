@@ -17,28 +17,26 @@
  * limitations under the License.
  * ============================================================ */
 
-
 !function ($) {
 
-  "use strict" // jshint ;_;
 
-
- /* SELECT CLASS DEFINITION
+  /* SELECT CLASS DEFINITION
   * ========================= */
   var Select = function (element) {
       this.$element = $(element)
 
       this.insertSpan()
+      this.setValueForTitle()
       this.setValue()
   }
 
   Select.prototype = {
-      insertSpan: function (){
+      insertSpan: function () {
           this.$element.prepend('<span></span>')
           this.$span = this.$element.find('span')
       },
 
-      setValue: function (){
+      setValue: function () {
           var that = this;
 
           this.element.find('select').on('change', function (){
@@ -46,11 +44,15 @@
               that.$span.html(text)
           })
       },
+
+      setValueForTitle: function(){
+          var title = this.element.attr('title')
+          this.$span.html(title)
+      }
   }
 
   /* SELECT PLUGIN DEFINITION
    * ========================== */
-
    $.fn.select = function (option) {
        return this.each(function () {
            var $this = $(this)
@@ -63,7 +65,7 @@
 
   $.fn.select.Constructor = Select
 
-  /* APPLY TO SELECT DROPDOWN ELEMENTS
+  /* APPLY TO SELECT SELECT ELEMENTS
    * =================================== */
 
   // $(document)
