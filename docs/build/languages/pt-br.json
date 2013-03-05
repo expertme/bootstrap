@@ -1409,6 +1409,14 @@
     "Inner Border": "Inner Border",
     "Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.":"A implementação HTML de <code>&lt;abbr&gt;</code> estilizada para abreviações e acrônimos para mostrar a versão expandida do hover. Abreviações com um atributo <code>title</code> tem uma linha clara e um cursor de ajuda, para fornecer um contexto adicional no estado hover",
     "A new css component called <a href=\"./components.html#thumbnails\">Inner Border</a> in <a href=\"./components.html\">Components</a>":"Um novo componente CSS chamado <a href=\"./components.html#thumbnails\">Borda Interna</a> em <a href=\"./components.html\">Componentes</a>",
-    "A new Javascript Plugin called <a href=\"./javascript.html#balloon\">Balloon</a> in <a href=\"./javascript.html\">JavaScript section</a>":"Um novo Plugin Javascript chamado <a href=\"./javascript.html#balloon\">Balloon</a> em seção <a href=\"./javascript.html\">JavaScript</a>"
+    "A new Javascript Plugin called <a href=\"./javascript.html#balloon\">Balloon</a> in <a href=\"./javascript.html\">JavaScript section</a>":"Um novo Plugin Javascript chamado <a href=\"./javascript.html#balloon\">Balloon</a> em seção <a href=\"./javascript.html\">JavaScript</a>",
+    "Popover on top":"Popover no topo",
+    "Popover on right":"Popover na direita",
+    "Popover on bottom":"Popover embaixo",
+    "Popover on left":"Popover na esquerda",
+    "Balloon on top":"Balloon no topo",
+    "Balloon on right":"Balloon na direita",
+    "Balloon on bottom":"Balloon embaixo",
+    "Balloon on left":"Balloon na esquerda"
   }
 }
