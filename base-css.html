@@ -19,7 +19,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./whatsnew.html">O que há de novo?</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -192,7 +192,7 @@
 
 
           <h2 id="abbreviations">Abreviações</h2>
-          <p>Implementação estilizada do elemento <code>&lt;abbr&gt;</code> para abreviações e acrônimos para mostrar a versão expandida do hover. Abreviações com um atributo <code>title</code> tem uma leve borda inferior e ajuda o cursor no hover, dando informação adicional de contexto</p>
+          <p>A implementação HTML de <code>&lt;abbr&gt;</code> estilizada para abreviações e acrônimos para mostrar a versão expandida do hover. Abreviações com um atributo <code>title</code> tem uma linha clara e um cursor de ajuda, para fornecer um contexto adicional no estado hover</p>
 
           <h3><code>&lt;abbr&gt;</code></h3>
           <p>Para texto expandido em um hover de uma abreviação, incluindo um atributo <code>title</code></p>
@@ -226,7 +226,7 @@
             </address>
             <address>
               <strong>Nome completo</strong><br>
-              <a href="mailto:#">first.last@gmail.com</a>
+              <a href="mailto:#">first.last@example.com</a>
             </address>
           </div>
 <pre class="prettyprint linenums">
@@ -239,7 +239,7 @@
 
 &lt;address&gt;
   &lt;strong&gt;Nome completo&lt;/strong&gt;&lt;br&gt;
-  &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+  &lt;a href="mailto:#"&gt;first.last@example.com&lt;/a&gt;
 &lt;/address&gt;
 </pre>
 
@@ -350,7 +350,7 @@
 </pre>
 
         <h3>Não estilizadas</h3>
-        <p>Uma lista de itens com nenhum <code>list-style</code> or margem esquerdas adicionais</p>
+        <p>Remova por padrão o <code>list-style</code> e padding da esquerda em uma lista de itens (ao primeiro elemento filho somente)</p>
         <div class="bs-docs-example">
           <ul class="unstyled">
             <li>Lorem ipsum dolor sit amet</li>
@@ -372,6 +372,21 @@
         </div>
 <pre class="prettyprint linenums">
 &lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        <h3>Inline</h3>
+        <p>Coloque todos itens de uma lista em uma única linha com <code>inline-block</code> e algum padding de leve</p>
+        <div class="bs-docs-example">
+          <ul class="inline">
+            <li>Lorem ipsum</li>
+            <li>Phasellus iaculis</li>
+            <li>Nulla volutpat</li>
+          </ul>
+        </div>
+<pre class="prettyprint linenums">
+&lt;ul class="inline"&gt;
   &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
@@ -1310,6 +1325,54 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 &lt;/div&gt;
 </pre>
 
+          <h4>Menus Dropdown segmentados</h4>
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">Action</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Ação</a></li>
+                  <li><a href="#">Outra ação</a></li>
+                  <li><a href="#">Algo a mais aqui</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Link separador</a></li>
+                </ul>
+              </div>
+              <input type="text">
+            </div>
+            <div class="input-append">
+              <input type="text">
+              <div class="btn-group">
+                <button class="btn" tabindex="-1">Action</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Ação</a></li>
+                  <li><a href="#">Outra ação</a></li>
+                  <li><a href="#">Algo a mais aqui</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Link separador</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+    &lt;input type="text"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text"&gt;
+    &lt;div class="btn-group"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
           <h4>Formulário de busca</h4>
           <form class="bs-docs-example form-search">
             <div class="input-append">
@@ -1506,6 +1569,15 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           </form>
 <pre class="prettyprint linenums">
 &lt;input class="input-xlarge" id="focusedInput" type="text" value="Isto está focado..."&gt;
+</pre>
+
+          <h3>Input inválido</h3>
+          <p>Inputs estilizados com o padrão do browser através de <code>:invalid</code>. Especifique um type e adicione o atributo <code>required</code></p>
+          <form class="bs-docs-example form-inline">
+            <input class="span3" type="email" placeholder="test@example.com" required>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="span3" type="email" required&gt;
 </pre>
 
           <h3>Inputs desabilitados</h3>
@@ -2075,6 +2147,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
       <div class="container">
         <p class="pull-right"><a href="#">Voltar ao topo</a></p>
         <p>Desenhado e construído com todo amor do mundo por <a href="http://twitter.com/mdo" target="_blank">@mdo</a> e <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Este projeto é uma versão do Twitter Bootstrap da globo.com mantido por <a href="http://blog.alexandremagno.net">Alexandre Magno</a>.</p>
         <p>Código licenciado sob <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentação sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <p><a href="http://glyphicons.com">Glyphicons grátis</a> licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <ul class="footer-links">

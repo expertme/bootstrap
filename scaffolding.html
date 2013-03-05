@@ -19,7 +19,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./whatsnew.html">O que há de novo?</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -301,13 +301,21 @@
 </pre>
 
           <h2>Teste de fluido</h2>
-          <p>Aninhando grids fluidos é um pouco diferente: o número de colunas aninhadas devem não bater o número de colunas pai. Ao invés disto, cada nível da coluna aninhada são reiniciadas por que cada linha leva 100% da coluna pai</p>
+          <p>Grids fluidos utilizam aninhamento diferente: cada nível animnhado de coluna deve adicionar mais de 12 colunas. Isto é por que o grid fluido usa percentagens, não pixels, para atribuir as larguras</p>
           <div class="row-fluid show-grid">
             <div class="span12">
               Fluid 12
               <div class="row-fluid show-grid">
                 <div class="span6">
                   Fluid 6
+                  <div class="row-fluid show-grid">
+                    <div class="span6">
+                      Fluid 6
+                    </div>
+                    <div class="span6">
+                      Fluid 6
+                    </div>
+                  </div>
                 </div>
                 <div class="span6">
                   Fluid 6
@@ -320,7 +328,13 @@
   &lt;div class="span12"&gt;
     Fluid 12
     &lt;div class="row-fluid"&gt;
-      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+      &lt;div class="span6"&gt;
+        Fluid 6
+        &lt;div class="row-fluid"&gt;
+          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+          &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -545,6 +559,7 @@
       <div class="container">
         <p class="pull-right"><a href="#">Voltar ao topo</a></p>
         <p>Desenhado e construído com todo amor do mundo por <a href="http://twitter.com/mdo" target="_blank">@mdo</a> e <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Este projeto é uma versão do Twitter Bootstrap da globo.com mantido por <a href="http://blog.alexandremagno.net">Alexandre Magno</a>.</p>
         <p>Código licenciado sob <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentação sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <p><a href="http://glyphicons.com">Glyphicons grátis</a> licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <ul class="footer-links">

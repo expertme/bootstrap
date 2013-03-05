@@ -3,7 +3,7 @@
 <header class="jumbotron subhead">
   <div class="container">
     <h1>{{_i}}JavaScript{{/i}}</h1>
-    <p class="lead">{{_i}}Bring Bootstrap's components to life&mdash;now with 13 custom jQuery plugins.{{/i}}
+    <p class="lead">{{_i}}Bring Bootstrap's components to life&mdash;now with 14 custom jQuery plugins.{{/i}}
   </div>
 </header>
 
@@ -22,7 +22,7 @@
           <li><a href="#tabs"><i class="icon-chevron-right"></i> {{_i}}Tab{{/i}}</a></li>
           <li><a href="#tooltips"><i class="icon-chevron-right"></i> {{_i}}Tooltip{{/i}}</a></li>
           <li><a href="#popovers"><i class="icon-chevron-right"></i> {{_i}}Popover{{/i}}</a></li>
-          <li><a href="#balloon"><i class="icon-chevron-right"></i> {{_i}}Balloon{{/i}}</a></li>
+          <li><a href="#balloon"><i class="icon-chevron-right"></i> {{_i}}Balloon{{/i}} <span class="label label-info">{{_i}}New!{{/i}}</a></span></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> {{_i}}Alert{{/i}}</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> {{_i}}Button{{/i}}</a></li>
           <li><a href="#collapse"><i class="icon-chevron-right"></i> {{_i}}Collapse{{/i}}</a></li>
@@ -66,7 +66,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
 
           <h3>{{_i}}Events{{/i}}</h3>
           <p>{{_i}}Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.{{/i}}</p>
-          <p>{{_i}}All infinitive events provide preventDefault functionality. This provides the abililty to stop the execution of an action before it starts.{{/i}}</p>
+          <p>{{_i}}All infinitive events provide preventDefault functionality. This provides the ability to stop the execution of an action before it starts.{{/i}}</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
     if (!data) return e.preventDefault() // stops modal from being shown
@@ -112,7 +112,7 @@ $('#myModal').on('show', function (e) {
           <h3>{{_i}}Static example{{/i}}</h3>
           <p>{{_i}}A rendered modal with header, body, and set of actions in the footer.{{/i}}</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
-            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>{{_i}}Modal header{{/i}}</h3>
@@ -438,7 +438,7 @@ $('#myModal').on('hidden', function () {
 
           <h3>{{_i}}Methods{{/i}}</h3>
           <h4>$().dropdown('toggle')</h4>
-          <p>{{_i}}A programatic api for toggling menus for a given navbar or tabbed navigation.{{/i}}</p>
+          <p>{{_i}}A programmatic api for toggling menus for a given navbar or tabbed navigation.{{/i}}</p>
         </section>
 
 
@@ -567,7 +567,7 @@ $('[data-spy="scroll"]').each(function () {
 
 
           <h2>{{_i}}Example tabs{{/i}}</h2>
-          <p>{{_i}}Add quick, dynamic tab functionality to transiton through panes of local content, even via dropdown menus.{{/i}}</p>
+          <p>{{_i}}Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.{{/i}}</p>
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">{{_i}}Home{{/i}}</a></li>
@@ -974,19 +974,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <p>{{_i}}<strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong>{{/i}}</p>
 
-        <h3>{{_i}}Static balloon{{/i}}</h3>
-        <p>{{_i}}Four options are available: top, right, bottom, and left aligned.{{/i}}</p>
-
         <h3>Live demo</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="balloon-test" title="foo balloon">{{_i}}Click to show balloon{{/i}}</a>
+          <a href="#" class="btn btn-large btn-danger" rel="balloon" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">{{_i}}Click to toggle balloon{{/i}}</a>
+        </div>
+        <h4>{{_i}}Four directions{{/i}}</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="balloon" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on top">Balloon on top</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on right">Balloon on right</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on bottom">Balloon on bottom</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on left">Balloon on left</a></li>
+          </ul>
         </div>
 <pre class="prettyprint linenums">
-$('.balloon-test').balloon({
-    content: 'lorem ipsum',
-    placement: 'top'
-});
-$('.balloon-test').balloon('show');
+//html  
+&lt;ul class=&quot;bs-docs-tooltip-examples&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;top&quot; data-content=&quot;sample content.&quot; &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;right&quot; data-content=&quot;sample content.&quot; &gt;Balloon on right&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;bottom&quot; data-content=&quot;sample content.&quot; &gt;Balloon on bottom&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;left&quot; data-content=&quot;sample content.&quot; &gt;Balloon on left&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<pre class="prettyprint linenums">
+// javascript
+$("a[rel=balloon]")
+  .balloon()
+  .click(function(e) {
+    e.preventDefault()
+})
 </pre>
 
       {{! /example }}
@@ -1655,7 +1679,7 @@ $('[data-spy="affix"]').each(function () {
                <td>{{_i}}offset{{/i}}</td>
                <td>{{_i}}number | function | object{{/i}}</td>
                <td>{{_i}}10{{/i}}</td>
-               <td>{{_i}}Pixels to offset from screen when calculating position of scroll. If a single number is provide, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provided an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).{{/i}}</td>
+               <td>{{_i}}Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).{{/i}}</td>
              </tr>
             </tbody>
           </table>
