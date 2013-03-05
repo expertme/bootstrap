@@ -3,7 +3,7 @@
 <header class="jumbotron subhead">
   <div class="container">
     <h1>{{_i}}JavaScript{{/i}}</h1>
-    <p class="lead">{{_i}}Bring Bootstrap's components to life&mdash;now with 13 custom jQuery plugins.{{/i}}
+    <p class="lead">{{_i}}Bring Bootstrap's components to life&mdash;now with 14 custom jQuery plugins.{{/i}}
   </div>
 </header>
 
@@ -22,7 +22,7 @@
           <li><a href="#tabs"><i class="icon-chevron-right"></i> {{_i}}Tab{{/i}}</a></li>
           <li><a href="#tooltips"><i class="icon-chevron-right"></i> {{_i}}Tooltip{{/i}}</a></li>
           <li><a href="#popovers"><i class="icon-chevron-right"></i> {{_i}}Popover{{/i}}</a></li>
-          <li><a href="#balloon"><i class="icon-chevron-right"></i> {{_i}}Balloon{{/i}}</a></li>
+          <li><a href="#balloon"><i class="icon-chevron-right"></i> {{_i}}Balloon{{/i}} <span class="label label-info">{{_i}}New!{{/i}}</a></span></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> {{_i}}Alert{{/i}}</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> {{_i}}Button{{/i}}</a></li>
           <li><a href="#collapse"><i class="icon-chevron-right"></i> {{_i}}Collapse{{/i}}</a></li>
@@ -860,10 +860,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <h4>{{_i}}Four directions{{/i}}</h4>
         <div class="bs-docs-example tooltip-demo">
           <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">{{_i}}Popover on top{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">{{_i}}Popover on right{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">{{_i}}Popover on bottom{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">{{_i}}Popover on left{{/i}}</a></li>
           </ul>
         </div>{{! /example }}
 
@@ -975,19 +975,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <p>{{_i}}<strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong>{{/i}}</p>
 
-        <h3>{{_i}}Static balloon{{/i}}</h3>
-        <p>{{_i}}Four options are available: top, right, bottom, and left aligned.{{/i}}</p>
-
         <h3>Live demo</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="balloon-test" title="foo balloon">{{_i}}Click to show balloon{{/i}}</a>
+          <a href="#" class="btn btn-large btn-danger" rel="balloon" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">{{_i}}Click to toggle balloon{{/i}}</a>
+        </div>
+        <h4>{{_i}}Four directions{{/i}}</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="balloon" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on top">{{_i}}Balloon on top{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on right">{{_i}}Balloon on right{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on bottom">{{_i}}Balloon on bottom{{/i}}</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on left">{{_i}}Balloon on left{{/i}}</a></li>
+          </ul>
         </div>
 <pre class="prettyprint linenums">
-$('.balloon-test').balloon({
-    content: 'lorem ipsum',
-    placement: 'top'
-});
-$('.balloon-test').balloon('show');
+//html  
+&lt;ul class=&quot;bs-docs-tooltip-examples&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;top&quot; data-content=&quot;sample content.&quot; &gt;{{_i}}Balloon on top{{/i}}&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;right&quot; data-content=&quot;sample content.&quot; &gt;{{_i}}Balloon on right{{/i}}&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;bottom&quot; data-content=&quot;sample content.&quot; &gt;{{_i}}Balloon on bottom{{/i}}&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;left&quot; data-content=&quot;sample content.&quot; &gt;{{_i}}Balloon on left{{/i}}&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<pre class="prettyprint linenums">
+// javascript
+$("a[rel=balloon]")
+  .balloon()
+  .click(function(e) {
+    e.preventDefault()
+})
 </pre>
 
       {{! /example }}

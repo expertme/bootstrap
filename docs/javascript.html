@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
+          <a class="brand" href="./whatsnew.html">O que há de novo?</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -93,7 +93,7 @@
           <li><a href="#tabs"><i class="icon-chevron-right"></i> Tab</a></li>
           <li><a href="#tooltips"><i class="icon-chevron-right"></i> Tooltip</a></li>
           <li><a href="#popovers"><i class="icon-chevron-right"></i> Popover</a></li>
-          <li><a href="#balloon"><i class="icon-chevron-right"></i> Balloon</a></li>
+          <li><a href="#balloon"><i class="icon-chevron-right"></i> Balloon <span class="label label-info">Novo!</a></span></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alertas</a></li>
           <li><a href="#buttons"><i class="icon-chevron-right"></i> Botões</a></li>
           <li><a href="#collapse"><i class="icon-chevron-right"></i> Colapsáveis</a></li>
@@ -137,7 +137,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
 
           <h3>Eventos</h3>
           <p>O Bootstrap provê eventos customizados para ações únicas dos plugins. Geralmente, estes vêm em uma forma de infinitivo e passado particípio - onde o infinitivo (ex. <code>show</code>) é lançado no começo de um evento, e sua forma no passado particípio (ex. <code>shown</code>) é lançado ao se completar uma ação.</p>
-          <p>Todos eventos no infinitivo provê uma funcionalidade com preventDefault. Isto provê a habilidade de parar a execução de uma ação antes de começar.</p>
+          <p>Todos eventos no infinitivo possuem a funcionalidade do preventDefault. Isto lha dá abilidade de parar a execução de uma ação antes de iniciar</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
     if (!data) return e.preventDefault() // stops modal from being shown
@@ -508,7 +508,7 @@ $('#myModal').on('hidden', function () {
 
           <h3>Métodos</h3>
           <h4>$().dropdown('toggle')</h4>
-          <p>Uma api programática para alternar menus para uma navegação comum ou em abas</p>
+          <p>Uma api programática para alternar menus em uma barra de navegação ou uma navegação em abas</p>
         </section>
 
 
@@ -637,7 +637,7 @@ $('[data-spy="scroll"]').each(function () {
 
 
           <h2>Exemplo de abas</h2>
-          <p>Adicione uma rápida e dinâmica funcionalidade de transição em painés de conteúdo, até mesmo via menus dropdowns</p>
+          <p>Adicione uma rápida e dinâmica navegação em abas para passar através de painéis de um conteúdo local, até mesmo via menus dropdown</p>
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Início</a></li>
@@ -929,10 +929,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <h4>Quatro direções</h4>
         <div class="bs-docs-example tooltip-demo">
           <ul class="bs-docs-tooltip-examples">
-            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover no topo</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover na direita</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover embaixo</a></li>
+            <li><a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover na esquerda</a></li>
           </ul>
         </div>
 
@@ -1044,19 +1044,43 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <p><strong>Requer que o <a href="#tooltips">Tooltip</a> seja incluído.</strong></p>
 
-        <h3>balloon estático</h3>
-        <p>Quatro opções estão disponíveis: top, right, bottom, e alinhado a esquerda com left</p>
-
         <h3>Live demo</h3>
         <div class="bs-docs-example" style="padding-bottom: 24px;">
-          <a href="#" class="balloon-test" title="foo balloon">clique para exibir o balloon</a>
+          <a href="#" class="btn btn-large btn-danger" rel="balloon" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Clique para alternar o Balloon</a>
+        </div>
+        <h4>Quatro direções</h4>
+        <div class="bs-docs-example tooltip-demo">
+          <ul class="bs-docs-tooltip-examples">
+            <li><a href="#" class="btn" rel="balloon" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on top">Balloon no topo</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on right">Balloon na direita</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on bottom">Balloon embaixo</a></li>
+            <li><a href="#" class="btn" rel="balloon" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Balloon on left">Balloon na esquerda</a></li>
+          </ul>
         </div>
 <pre class="prettyprint linenums">
-$('.balloon-test').balloon({
-    content: 'lorem ipsum',
-    placement: 'top'
-});
-$('.balloon-test').balloon('show');
+//html  
+&lt;ul class=&quot;bs-docs-tooltip-examples&quot;&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;top&quot; data-content=&quot;sample content.&quot; &gt;Balloon no topo&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;right&quot; data-content=&quot;sample content.&quot; &gt;Balloon na direita&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;bottom&quot; data-content=&quot;sample content.&quot; &gt;Balloon embaixo&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn&quot; rel=&quot;balloon&quot; data-placement=&quot;left&quot; data-content=&quot;sample content.&quot; &gt;Balloon na esquerda&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+<pre class="prettyprint linenums">
+// javascript
+$("a[rel=balloon]")
+  .balloon()
+  .click(function(e) {
+    e.preventDefault()
+})
 </pre>
 
 
@@ -1724,7 +1748,7 @@ $('[data-spy="affix"]').each(function () {
                <td>offset</td>
                <td>number | function | object</td>
                <td>10</td>
-               <td>Pixels para offset da tela quando é calculada a posição do scroll. Se um único número é fornecido, o offset irá ser aplicado nas direções topo e esquerda. Para uma única direção, ou múltiplos efeitos únicos de offset, simplesmente passe como parâmetro um objeto <code>offset: { x: 10 }</code>. Use uma função quando você precisa dar um offset dinâmicamente (útil para alguns designs responsivos).</td>
+               <td>Pixel para deslocar da tela quando calculando a posição de um scroll. Se um único número é fornecido, o offset será aplicado em ambos os lados esquerda e direita. Para obter uma direção única, ou múltiplos offsets, você pode usar um <code>offset: { x: 10 }</code>. Use uma função quando você precisar dinamicamente prover um offset (útil para design responsivo)</td>
              </tr>
             </tbody>
           </table>
@@ -1745,6 +1769,7 @@ $('[data-spy="affix"]').each(function () {
       <div class="container">
         <p class="pull-right"><a href="#">Voltar ao topo</a></p>
         <p>Desenhado e construído com todo amor do mundo por <a href="http://twitter.com/mdo" target="_blank">@mdo</a> e <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Este projeto é uma versão do Twitter Bootstrap da globo.com mantido por <a href="http://blog.alexandremagno.net">Alexandre Magno</a>.</p>
         <p>Código licenciado sob <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentação sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <p><a href="http://glyphicons.com">Glyphicons grátis</a> licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a>.</p>
         <ul class="footer-links">
