@@ -19,7 +19,6 @@
 
 !function ($) {
 
-
   /* SELECT CLASS DEFINITION
   * ========================= */
   var Select = function (element) {
@@ -45,7 +44,7 @@
           })
       },
 
-      setValueForTitle: function(){
+      setValueForTitle: function () {
           var title = this.element.attr('title')
           this.$span.html(title)
       }
